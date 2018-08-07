@@ -1,10 +1,8 @@
-const SCREENSHOT_PATH = process.env.CIRCLE_ARTIFACTS || './screenshots';
+const SCREENSHOT_PATH = process.env.CIRCLE_ARTIFACTS || './screenshots'
 
 module.exports = {
-  src_folders: [
-    'tests/fixtures'
-  ],
-  output_folder: 'reports',
+  src_folders: ['tests/fixtures'],
+  output_folder: './reports',
   custom_commands_path: 'tests/commands',
   page_objects_path: '',
   globals_path: 'tests/globals.js',
@@ -36,13 +34,9 @@ module.exports = {
         browserName: 'chrome',
         marionette: true,
         chromeOptions: {
-          args: [
-            '--no-sandbox',
-            'incognito',
-            'disable-extensions'
-          ]
+          args: ['--no-sandbox', 'incognito', 'disable-extensions']
         }
       }
     }
   }
-};
+}
