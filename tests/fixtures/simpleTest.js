@@ -4,7 +4,7 @@ module.exports = {
       .url('https://github.com/mezderman')
       .saveScreenshot('reports/screenshots/github.png', function (data) {
         console.log('image saved')
-        browser.end()
+        browser.url('www.google.com')
       })
   }
 }
